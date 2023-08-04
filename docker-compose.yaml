@@ -6,7 +6,9 @@ services:
   web:
     image: web:v1
     container_name: web
-
+    depends_on:
+      - catalogue
+      - user
   mongodb:
     image: mongodb:v1
     container_name: mongodb
